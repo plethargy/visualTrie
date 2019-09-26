@@ -154,6 +154,7 @@ document.getElementById('addBtn').addEventListener('click', function(e) {
     e.preventDefault();
 
     let input = document.getElementById('addInput').value;
+    input = input.split(' ').join('');
     root.addWord(input);
     document.getElementById('addInput').value = "";
 
@@ -166,6 +167,7 @@ document.getElementById('searchBtn').addEventListener('click', function(e) {
     e.preventDefault();
 
     let input = document.getElementById('searchInput').value;
+    input = input.split(' ').join('');
     if(root.searchWord(input))
         alert(`${input} has been found in the trie!`);
     else    
