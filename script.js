@@ -100,7 +100,7 @@ class Node
         }
     }
 
-    render ()
+    render()
     {
         d3.select("svg").remove();
         const width = 500;
